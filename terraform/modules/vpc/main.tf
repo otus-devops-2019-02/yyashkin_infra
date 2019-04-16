@@ -5,5 +5,5 @@ allow {
 protocol = "tcp"
 ports = ["22"]
 }
-source_ranges = ["0.0.0.0/0"]
+source_ranges = "${var.source_ranges}"
 }
