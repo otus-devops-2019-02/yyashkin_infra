@@ -5,7 +5,7 @@
         {
             "type": "googlecompute",
             "project_id": "{{user `project_id`}}",
-            "image_name": "reddit-base-{{timestamp}}",
+            "image_name": "reddit-app-{{timestamp}}",
             "image_family": "reddit-app-base",
             "source_image_family": "{{user `source_image_family`}}",
             "zone": "europe-west1-b",
@@ -14,10 +14,9 @@
         }
     ],
     "provisioners": [
-        {
-            "type": "shell",
-            "script": "scripts/install_ruby.sh",
-            "execute_command": "sudo {{.Path}}"
-        }
+    {
+    "type": "ansible",
+    "playbook_file": "ansible/packer_app.yml"
+    }
     ]
 }
