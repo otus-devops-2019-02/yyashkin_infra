@@ -4,3 +4,5 @@
 *.tfvars
 .terraform
 reddit_app.yml
+jdauphant.nginx
+vault.key
